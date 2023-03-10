@@ -1,23 +1,39 @@
+
+
 #!/bin/bash
 
-echo "Enter the Three Numbers"
-read num num2 num3
+# Prompt the user to enter three numbers
+echo "Enter three numbers:"
+read num1
+read num2
+read num3
 
-if [ $num1 -ge $num2 ] && [ $num1 -ge $num3 ]; then
-    largest=$num1
-elif [ $num2 -ge $num1 ] && [ $num2 -ge $num3 ]; then
+# Initialize the largest and smallest variables
+largest=$num1
+smallest=$num1
+
+# Find the largest number
+if [ $num2 -gt $largest ]
+then
     largest=$num2
-else
+fi
+
+if [ $num3 -gt $largest ]
+then
     largest=$num3
 fi
 
-if [ $num -le $num2 ] && [ $num -le $num3 ]; then
-    smallest=$num
-elif [$num2 -le $num] && [$num2 -le $num3]; then
+# Find the smallest number
+if [ $num2 -lt $smallest ]
+then
     smallest=$num2
-elif [$num3 -le $num2] && [$num3 -le $num]; then
+fi
+
+if [ $num3 -lt $smallest ]
+then
     smallest=$num3
 fi
 
-echo "Largest is $largest"
-echo "Samllest is $smallest"
+# Display the results
+echo "Largest number is: $largest"
+echo "Smallest number is: $smallest"
