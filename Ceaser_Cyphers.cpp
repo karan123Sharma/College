@@ -18,18 +18,18 @@ void Decrypt(string Enc, int key)
     }
     cout << Dec;
 }
-string Polyalphabetic(string Str)
+//string Polyalphabetic(string Str)
 {
-    string Key;
-    cin >> Key;
-    string PolyEnc;
-    for (int i = 0; i < Key.size(); i++)
-    {
-        PolyEnc += (Str[i] - 'a' + Key[i] - 'a') % 26 + 'a';
-    }
-    cout<<PolyEnc;
-    return PolyEnc;
-}
+//     string Key;
+//     cin >> Key;
+//     string PolyEnc;
+//     for (int i = 0; i < Key.size(); i++)
+//     {
+//         PolyEnc += (Str[i] - 'a' + Key[i] - 'a') % 26 + 'a';
+//     }
+//     cout<<PolyEnc;
+//     return PolyEnc;
+// }
 int main()
 {
     string Str;
